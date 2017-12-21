@@ -6,9 +6,70 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 #sidebar.active {
     margin-left: -250px;
 }
+
+
+
+
+/* Testing */
+.card
+{
+    min-width: 400px;
+    min-height: 650px;
+    margin-left: 100px;
+    border: 1px solid pink;
+    display: inline-block;
+}
+
+.row1
+{
+    width: max-content;
+}
+
+/* .row2
+{
+    width: max-content;
+} */
+
+
+
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+  }
+  
+  /* .Aligner-item {
+    max-width: 50%;
+  } */
+  
+  .img-card
+  {
+      height: 380px;
+      width: 380px;
+      float: right;
+  }
+
+  .title
+  {
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    float: left;
+    margin: 0px;
+    margin-bottom: 10px;
+    transform: rotate(180deg);
+    text-align: left;
+    height: 650px;
+  }
+
+  .sub-text-1
+  {
+      width: 380px;
+  }
