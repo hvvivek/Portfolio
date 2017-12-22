@@ -269,4 +269,13 @@
     {
         padding-right: 200px;
     }
+
+    .card
+    {
+        min-width: 90vw;
+        /* min-height: 650px; */
+        margin-left: 5vw;
+        border: 1px solid transparent;
+        display: inline-block;
+    }
 }
