@@ -45,7 +45,7 @@
 .row1
 {
     min-width: max-content;
-    padding-right: 800px;
+    padding-right: 600px;
 }
 
 /* .row2
@@ -217,4 +217,56 @@
 {
     border-radius: 10px;
 	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#sidebar-mobile
+{
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        /* background-color: lightgreen; */
+        overflow: hidden;
+    }
+
+    #sidebar
+    {
+        display: none;
+
+    }
+
+    #sidebar-mobile
+    {
+        display: block;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #sidebar-mobile p
+    {
+        margin-bottom: 5px;
+        
+    }
+
+    .wrapper
+    {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    /* #style-3
+    {
+        min-width: 100vw;
+        max-height: 90vh;
+    } */
+
+    .row1
+    {
+        padding-right: 200px;
+    }
 }
