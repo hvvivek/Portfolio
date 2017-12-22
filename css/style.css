@@ -1,7 +1,7 @@
-/* body
+body
 {
     overflow: hidden;
-} */
+}
 
 /* .content
 {
@@ -45,7 +45,7 @@
 .row1
 {
     min-width: max-content;
-    padding-right: 600px;
+    padding-right: 200px;
 }
 
 /* .row2
@@ -258,6 +258,7 @@
         flex-wrap: wrap;
         margin-right: -15px;
         margin-left: -15px;
+        overflow: hidden;
     }
     /* #style-3
     {
@@ -272,10 +273,39 @@
 
     .card
     {
-        min-width: 90vw;
+        max-width: 90vw;
         /* min-height: 650px; */
         margin-left: 5vw;
+        margin-right: 5vw;
+
         border: 1px solid transparent;
         display: inline-block;
+    }
+
+    /* .img-container
+    {
+        width: 90vw;
+
+    }
+    .img-card
+    {
+        width: 90vw;
+        height: 90vw;
+    } */
+}
+
+/* ----------- iPhone 6 ----------- */
+ 
+@media screen and (max-width: 375px) {
+    body {
+        overflow: hidden!important;
+    }
+}
+ 
+/* ----------- iPad mini ----------- */
+ 
+@media screen and (max-width: 768px) {
+    body {
+        overflow: hidden!important;
     }
 }
