@@ -71,15 +71,15 @@
   .wrapper-rhs
   {
     width: 400px;
-    height: 650px;
+    /* height: 650px; */
     float: left;
   }
 
-  .text-wrapper
+  /* .text-wrapper
   {
     position: absolute;
     bottom: 0px;
-  }
+  } */
 
   .img-card
   {
@@ -107,9 +107,11 @@
     margin-bottom: 1rem;
     transform: rotate(180deg);
     text-align: left;
-    height: 650px;
-    font-size: 3em;
-    font-weight: bold;
+    /* height: 650px; */
+    font-size: 0.6em;
+    /* font-weight: bold; */
+    color: #555;
+    font-style: italic;
 
   }
 
@@ -118,6 +120,7 @@
       font-weight: bold;
       margin-top: 10px;
       margin-bottom: 0px;
+      text-align: center;
   }
 
   .sub-text-1
