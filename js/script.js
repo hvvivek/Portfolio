@@ -47,7 +47,6 @@ var clickFunctionVideo = function(e) {
 }
 
 $(document).ready(function () {
-    console.log(window.mobilecheck());
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
@@ -69,34 +68,40 @@ $(document).ready(function () {
         event.preventDefault();
         });
 
+        var mq = window.matchMedia('@media screen and (max-width: 700px)');
+        var mq2 = window.matchMedia('(max-width: 700px)');
         
+        if(mq.matches) {
+            // the width of browser is more then 700px
+            console.log("More than 700px")
+            $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
+        
+            
+        } else {
+            // the width of browser is less then 700px
+            console.log("Less than 700px")
+            $(".img-card").unbind('hover mouseenter mouseleave');
+            $(".img-card").click(clickFunctionImage);
+            $(".vid-card").click(clickFunctionVideo);
+        }
+        
+        mq2.addListener(function(changed) {
+            if(changed.matches) {
+                // the width of browser is more then 700px
+                console.log("Changed to Less than 700px")
+                $(".img-card").unbind('hover mouseenter mouseleave');
+                $(".img-card").click(clickFunctionImage);
+                $(".vid-card").click(clickFunctionVideo);
+        
+        
+            } else {
+                // the width of browser is less then 700px
+                console.log("Changed to More than 700px")
+                $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
+        
+            }
+        });
 });
 
-var mq = window.matchMedia('(max-width: 700px)');
-if(mq.matches) {
-    // the width of browser is more then 700px
-    console.log("More than 700px")
 
-} else {
-    // the width of browser is less then 700px
-    console.log("Less than 700px")
-
-}
-
-mq.addListener(function(changed) {
-    if(changed.matches) {
-        // the width of browser is more then 700px
-        console.log("Changed to Less than 700px")
-        $(".img-card").unbind('hover mouseenter mouseleave');
-        $(".img-card").click(clickFunctionImage);
-        $(".vid-card").click(clickFunctionVideo);
-
-
-    } else {
-        // the width of browser is less then 700px
-        console.log("Changed to More than 700px")
-        $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
-
-    }
-});
 
