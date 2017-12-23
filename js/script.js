@@ -71,36 +71,40 @@ $(document).ready(function () {
         var mq = window.matchMedia('@media screen and (max-width: 700px)');
         var mq2 = window.matchMedia('(max-width: 700px)');
         
-        if(mq.matches) {
-            // the width of browser is more then 700px
-            console.log("More than 700px")
-            $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
-        
-            
-        } else {
-            // the width of browser is less then 700px
-            console.log("Less than 700px")
-            $(".img-card").unbind('hover mouseenter mouseleave');
-            $(".img-card").click(clickFunctionImage);
-            $(".vid-card").click(clickFunctionVideo);
-        }
-        
-        mq2.addListener(function(changed) {
-            if(changed.matches) {
+        if(window.mobilecheck())
+        {
+            if(mq.matches ) {
                 // the width of browser is more then 700px
-                console.log("Changed to Less than 700px")
+                console.log("More than 700px")
+                $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
+            
+                
+            } else {
+                // the width of browser is less then 700px
+                console.log("Less than 700px")
                 $(".img-card").unbind('hover mouseenter mouseleave');
                 $(".img-card").click(clickFunctionImage);
                 $(".vid-card").click(clickFunctionVideo);
-        
-        
-            } else {
-                // the width of browser is less then 700px
-                console.log("Changed to More than 700px")
-                $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
-        
             }
-        });
+        
+        
+            mq2.addListener(function(changed) {
+                if(changed.matches) {
+                    // the width of browser is more then 700px
+                    console.log("Changed to Less than 700px")
+                    $(".img-card").unbind('hover mouseenter mouseleave');
+                    $(".img-card").click(clickFunctionImage);
+                    $(".vid-card").click(clickFunctionVideo);
+            
+            
+                } else {
+                    // the width of browser is less then 700px
+                    console.log("Changed to More than 700px")
+                    $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
+            
+                }
+            });
+        }
 });
 
 

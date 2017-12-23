@@ -248,6 +248,7 @@ body
 
     .content
     {
+        align-items: unset;
         height: 90vh;
     }
     #sidebar-mobile p
