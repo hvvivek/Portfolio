@@ -242,8 +242,14 @@ body
         text-align: center;
         padding-left: 0px;
         padding-right: 0px;
+        padding-top: 2vh;
+        height: 10vh;
     }
 
+    .content
+    {
+        height: 90vh;
+    }
     #sidebar-mobile p
     {
         margin-bottom: 5px;
