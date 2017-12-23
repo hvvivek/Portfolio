@@ -62,12 +62,20 @@ $(document).ready(function () {
 
     $(".img-card").hover(hoverFunctionStart, hoverFunctionEnd);
 
-        $(".content").on('mousewheel', function(event, delta) {
-            // console.log(event.originalEvent.deltaY)
-        this.scrollLeft += (event.originalEvent.deltaY);
+        // $(".content").on('mousewheel', function(event, delta) {
+        //     // console.log(event.originalEvent.deltaY)
+        // this.scrollLeft += (event.originalEvent.deltaY);
+        // event.preventDefault();
+        // });
+
+        $(".content").on('wheel', function(event, delta) {
+        var scrollBy = 100*Math.abs(event.originalEvent.deltaY)/event.originalEvent.deltaY
+        console.log(scrollBy)
+        this.scrollLeft += (scrollBy);
         event.preventDefault();
         });
 
+        
         var mq = window.matchMedia('@media screen and (max-width: 700px)');
         var mq2 = window.matchMedia('(max-width: 700px)');
         

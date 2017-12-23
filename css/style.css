@@ -45,6 +45,7 @@ body
 .row1
 {
     min-width: max-content;
+    min-width: -moz-max-content;
     padding-right: 200px;
 }
 
@@ -132,6 +133,7 @@ body
       width: 370px;
       float: left;
       margin-bottom:  5px;
+      text-align: center;
   }
 
   .sub-text-2
@@ -214,6 +216,26 @@ body
 }
 
 #style-3::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#style-3::-moz-scrollbar-track
+{
+    border-radius: 10px;
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	background-color: #fff;
+}
+
+#style-3::-moz-scrollbar
+{
+    height: 3px;
+    border-radius: 6px;
+	background-color: #fff;
+}
+
+#style-3::-moz-scrollbar-thumb
 {
     border-radius: 10px;
 	background-color: rgba(0, 0, 0, 0.2);
